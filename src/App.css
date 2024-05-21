@@ -1,0 +1,214 @@
+:root {
+  --blue-color: #021644;
+  --yellow-color: rgb(218, 193, 64);
+  --white-color: #fff;
+  --green-color: rgb(69, 109, 28);
+  --black-color: #333;
+
+  --button-border: 100px;
+
+  --d: 4500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgb(242, 248, 249);
+  --c2: rgba(168, 172, 255, 0.3);
+}
+
+@font-face {
+  font-family: "din-condensed";
+  src: url("./fonts/DINCondensed-Regular.eot"); /*For ie browser*/
+  src: local("DIN Condensed"), local("DINCondensed-Regular"),
+    url("./fonts/DINCondensed-Regular.eot?#iefix") format("embedded-opentype"),
+    /*For other browsers*/ url("./fonts/DINCondensed-Regular.woff2")
+      format("woff2"),
+    url("./fonts/DINCondensed-Regular.woff") format("woff"),
+    url("./fonts/DINCondensed-Regular.ttf") format("truetype"); /*For other browsers*/
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "din-condensed-light";
+  src: url("./fonts/DINCondensed-Light.eot");
+  src: local("DIN Condensed"), local("DINCondensed-Light"),
+    url("./fonts/DINCondensed-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/DINCondensed-Light.woff2") format("woff2"),
+    url("./fonts/DINCondensed-Light.woff") format("woff"),
+    url("./fonts/DINCondensed-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "din-light";
+  src: url("./fonts/RobotoLight.eot");
+  src: local("RobotoLight"), local("RobotoLight"),
+    url("./fonts/RobotoLight.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/RobotoLight.woff2") format("woff2"),
+    url("./fonts/RobotoLight.woff") format("woff"),
+    url("./fonts/RobotoLight.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  cursor: url("./assets/img/bee.png"), pointer;
+  max-height: 99%;
+}
+
+h1 {
+  margin: 0 !important;
+  padding-top: 12vw;
+  font-size: 5vw !important;
+  text-align: center !important;
+  letter-spacing: 0.3rem;
+  color: white !important;
+  text-transform: uppercase !important;
+}
+
+.container {
+  overflow: hidden !important ;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #1a1814;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #1a1814;
+  border-top-color: #cda45e;
+  border-bottom-color: #cda45e;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+  border: 2px solid #cda45e;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #cda45e;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #cda45e;
+  color: #1a1814;
+}
+
+.back-to-top:hover i {
+  color: #444444;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 3vw 4vw;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: #f5faff;
+}
+
+.section-header {
+  font-size: 3vw;
+  color: #444;
+  text-align: center;
+  margin: 2rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  h1 {
+      padding-top: 14vw !important;
+    }
+
+  .section-header {
+    font-size: 2.1rem;
+  }
+}
+@media (max-width: 768px) {
+  h1 {
+    padding-top: 16vw !important;
+  }
+}
+@media (max-width: 575px) {
+  h1 {
+    padding-top: 17vw !important;
+  }
+  .section-header {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  h1 {
+    padding-top: 22vw !important;
+  }
+  .section-header {
+    font-size: 1.6rem;
+  }
+  section {
+    padding: 3vw 1vw;
+    overflow: hidden;
+  }
+}
+.nodash:before {
+  content: "";
+}
+.nodash:after {
+  content: "";
+}

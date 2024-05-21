@@ -1,0 +1,306 @@
+/* /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.footerSection-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* Distribute items evenly */
+  align-items: flex-start;
+  /* Align items at the start */
+  margin: 2.2vw 0 0vw 0;
+  padding: 0;
+  letter-spacing: 0.02vw;
+}
+
+/* Column styles */
+.footerSection-container .column {
+  flex: 1 1 calc(25% - 20px);
+  /* Four columns each taking 25% width with 20px space between them */
+  max-width: calc(25% - 20px);
+  /* Maximum width for each column */
+  padding: 1vw 3vw;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  /* Margin at the bottom of each column */
+}
+
+.footerSection-container .column4 {
+  flex: 1 1 calc(25% - 20px);
+  /* Four columns each taking 25% width with 20px space between them */
+  max-width: calc(25% - 20px);
+  /* Maximum width for each column */
+  padding: 1vw 3vw;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  /* Margin at the bottom of each column */
+}
+
+.footerSection-container .column h4,
+.column4 h4 {
+  font-size: 1.55vw;
+  color: black;
+  position: relative;
+  padding-bottom: 0.1vw;
+}
+
+/* Text styles */
+.footerSection-container .column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection-container .column ul li a,
+.column a {
+  text-decoration: none;
+  color: var(--black-color);
+}
+
+.footerSection-container .column li,
+.column a {
+  font-size: 1.25vw;
+}
+
+.footerSection-container .column4 a {
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 1vw;
+  padding-right: -0.3vw !important;
+}
+
+.footerSection-container .column4 .areas {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 1.3vw;
+}
+
+.footerSection-container .column4 .areas a {
+  margin-right: 0.3rem;
+  margin-bottom: 5px;
+  /* Add margin bottom to create space between links */
+}
+
+.footer_section {
+  background: var(--blue-color);
+  text-align: center;
+  font-family: "din-light";
+  padding: 1.9vw 0 0.5vw 0;
+  color: var(--black-color);
+  font-size: 1vw;
+  z-index: 1;
+  z-index: -999;
+  letter-spacing: .1rem;
+  color: var(--white-color);
+}
+
+.column4 .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4vw;
+  height: 2.4vw;
+  border-radius: 50%;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+  margin-right: 0.5vw;
+  transition: 0.3s;
+  font-size: 1.6vw !important;
+}
+
+.column ul li a:hover {
+  color: var(--yellow-color);
+}
+
+.column4 a:hover {
+  color: var(--yellow-color);
+}
+
+.column i {
+  font-size: 1.5vw;
+}
+
+.cta-button {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .footerSection-container {
+    margin: 2vw 0;
+  }
+
+  /* Column styles */
+  .footerSection-container .column {
+    flex: 1 1 calc(27% - 15px);
+    /* Four columns each taking 25% width with 20px space between them */
+    max-width: calc(35% - 20px);
+    /* Maximum width for each column */
+  }
+
+  .footerSection-container .column h4,
+  .column4 h4 {
+    font-size: 1.8vw;
+  }
+
+  /* Text styles */
+
+  .footerSection-container .column li,
+  .column a {
+    font-size: 1.5vw;
+    letter-spacing: 0.03rem;
+  }
+
+  .footerSection-container .column4 a {
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1.35vw;
+  }
+
+  .column4 .social-links a {
+    width: 3vw;
+    height: 3vw;
+    padding-top: -3vw !important;
+    font-size: 2vw !important;
+  }
+  .footer_section {
+    font-size: 1.4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerSection-container .column h4,
+  .column4 h4 {
+    font-size: 3vw;
+  }
+
+  .footerSection-container .column li,
+  .column a {
+    font-size: 2vw;
+  }
+
+  .footerSection-container .column4 a {
+    font-size: 1.9vw !important;
+  }
+
+  .column4 .social-links a {
+    width: 3vw;
+    height: 3vw;
+    padding-top: 0.2vw !important;
+    font-size: 2vw !important;
+  }
+
+  .footer_section {
+    font-size: 2vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .footerSection-container {
+    margin: 4rem 0 2rem 0;
+  }
+
+  /* Column styles */
+  .footerSection-container .column {
+    flex: 1 1 calc(80% - 20px);
+    /* Four columns each taking 25% width with 20px space between them */
+    max-width: calc(80% - 20px);
+    /* Maximum width for each column */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerSection-container .column4 {
+    flex: 1 1 calc(80% - 20px);
+    /* Four columns each taking 25% width with 20px space between them */
+    max-width: calc(80% - 20px);
+    /* Maximum width for each column */
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footerSection-container .column h4,
+  .column4 h4 {
+    font-size: 1.4rem;
+  }
+
+  /* Text styles */
+
+  .footerSection-container .column li,
+  .column a {
+    font-size: 0.9rem;
+    letter-spacing: 0.07rem;
+  }
+
+  .column4 .social-links {
+    margin: 0 25vw;
+  }
+
+  .column4 .social-links a {
+    width: 6vw;
+    height: 5.5vw;
+    padding: 0 0.5vw;
+    font-size: 4vw !important;
+    margin-right: 0.8vw;
+  }
+
+  .footerSection-container .column4 .areas {
+    padding-left: 1vw !important;
+    width: 100% !important;
+    justify-content: center;
+  }
+
+  .footerSection-container .column4 .areas a {
+    line-height: 1.4;
+    font-size: 0.8rem !important;
+    padding-right: 0.5vw;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .footer_section {
+    font-size: 3.1vw;
+    margin-bottom: 12vw;
+    overflow: hidden;
+  }
+
+  .cta-button {
+    display: block;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -3.2% !important;
+    padding: 2.8vw 0;
+    background: linear-gradient(
+      90deg,
+      var(--blue-color),
+      #095f2a,
+      var(--yellow-color)
+    );
+    border: none;
+    border-radius: 0.625rem;
+    background-size: 400%;
+    width: calc(100% - 1rem);
+    animation: steam 20s linear infinite;
+  }
+
+  .cta-button .quotea {
+    display: flex;
+    justify-content: center;
+    padding-top: 1vw !important;
+    letter-spacing: 0.06rem;
+    font-family: "din-condensed";
+    font-size: 6vw;
+  }
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
