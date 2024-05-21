@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /wp-content/
+
+Sitemap: https://bur-han.ca/sitemap.xml
